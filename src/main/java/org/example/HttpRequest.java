@@ -36,6 +36,7 @@ final class HttpRequest implements Runnable {
         }
 
         StringTokenizer tokens = new StringTokenizer(requestLine);
+        tokens.nextToken();
         String fileName = tokens.nextToken();
 
         fileName = "src/main/resources" + URLDecoder.decode(fileName, StandardCharsets.UTF_8);
